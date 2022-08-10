@@ -166,7 +166,8 @@ def get_WHO_codes(entities):
                 res_dict[ent_text] = score_and_icd11_code[:3]
             else:
                 print("Received Status code of {}".format(response.status_code))
-        except:
+        except Exception as inst:
+            print(type(inst), inst)    # the exception instance and the exception
             print("Some other exception happened. Need to figure out what...?")
             
             
@@ -209,9 +210,9 @@ def NER_analysis():
 if __name__ == "__main__":
 
     ap = argparse.ArgumentParser()
-    ap.add_argument("-model_path", "--model_path", required = True, type = str, help = "path to trained SPACY model")
-    ap.add_argument("-ICD_credentials_path", "--ICD_credentials_path", required = True, type = str, help = "path to ICD Credentials JSON")
-    ap.add_argument("-output", "--output", required = True, type = str, help = "path to output everything this script produces")
+    ap.add_argument("-model_path", "--model_path", required = False, default = "./spacy_model/model-best/", type = str, help = "path to trained SPACY model")
+    ap.add_argument("-ICD_credentials_path", "--ICD_credentials_path", required = False, default = "./WHO_ICD_logiin_credentials.json", type = str, help = "path to ICD Credentials JSON")
+    ap.add_argument("-output", "--output", required = False, type = str, help = "path to output everything this script produces")
     ap.add_argument("-enable_failure_log", "--enable_failure_log", action = "store_true")
     args = vars(ap.parse_args())
     print(args)
@@ -225,15 +226,16 @@ if __name__ == "__main__":
       
     # Loading the model from the supplied path
     SPACY_NER_MODEL = load_SPACY_NER_model(model_path= args['model_path'])
-
-    #Path for storing the processing outputs
-    output = args['output']
-    if not os.path.exists(output):
-        print("creating : {}".format(output))
-        os.makedirs(output)
         
     # Dump the processing logs if logging is enabled
     if args['enable_failure_log']:
+
+        #Path for storing the processing outputs
+        output = args['output']
+        if not os.path.exists(output):
+            print("creating : {}".format(output))
+            os.makedirs(output)
+
         log_file_path = os.path.join(output, 'Processing.log')
         if os.path.exists(log_file_path):
             os.remove(log_file_path)
