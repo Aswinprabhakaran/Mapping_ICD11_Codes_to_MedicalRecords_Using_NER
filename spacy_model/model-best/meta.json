@@ -1,0 +1,70 @@
+{
+  "lang":"en",
+  "name":"pipeline",
+  "version":"0.0.0",
+  "spacy_version":">=3.3.0,<3.4.0",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"497a708c7",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":null,
+    "mode":"default"
+  },
+  "labels":{
+    "tok2vec":[
+
+    ],
+    "ner":[
+      "MEDICAL CONDITION",
+      "MEDICINE",
+      "PATHOGEN",
+      "UNKNOWN"
+    ]
+  },
+  "pipeline":[
+    "tok2vec",
+    "ner"
+  ],
+  "components":[
+    "tok2vec",
+    "ner"
+  ],
+  "disabled":[
+
+  ],
+  "performance":{
+    "ents_f":0.6312056738,
+    "ents_p":0.6899224806,
+    "ents_r":0.5816993464,
+    "ents_per_type":{
+      "PATHOGEN":{
+        "p":0.537037037,
+        "r":0.5918367347,
+        "f":0.5631067961
+      },
+      "MEDICAL CONDITION":{
+        "p":0.7972972973,
+        "r":0.59,
+        "f":0.6781609195
+      },
+      "UNKNOWN":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "MEDICINE":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      }
+    },
+    "tok2vec_loss":286.5818279439,
+    "ner_loss":1846.1638016958
+  }
+}

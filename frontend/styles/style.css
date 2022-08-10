@@ -1,0 +1,190 @@
+.text-white {
+  --bs-text-opacity: 1;
+}
+
+.clsbtn.btn-secondary {
+  font-size: 14px;
+  background-color: #f4f4f4;
+  color: black;
+  width: 80px;
+  border-color: lightgrey;
+  font-weight: bold;
+}
+
+/* Table CSS */
+
+table,
+th,
+td {
+  border: 1px solid white;
+}
+
+detail-table > td {
+  color: black;
+}
+detail-table > tbody > tr > td:nth-child(2) {
+  color: red;
+}
+
+thead {
+  background-color: #8c77b0 !important;
+  /* background-color: #3c8dbc; */
+  color: white;
+  font-weight: lighter !important;
+  font-size: medium;
+  text-align: center;
+}
+.pagination__buttons {
+  width: 80px;
+  /* height: 30px; */
+  height: 35px;
+  /* margin-top: 10px; */
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 5px;
+  font-size: 14px;
+}
+.pagination__buttons #UserAccountsTable {
+  overflow-x: scroll;
+  width: 100%;
+}
+.pagination-table {
+  width: 100%;
+  overflow-x: auto;
+  float: right;
+}
+.pagination {
+  justify-content: right;
+  margin: 10px;
+}
+
+.pageno {
+  background-color: #c1c5c7;
+}
+.tableRowHover:hover {
+  background-color: #c2c2c5 !important;
+}
+
+#Action {
+  text-align: center;
+  /* width: 18% !important; */
+  min-width: 10%;
+  /* font-size: 12px !important; */
+}
+.topdata.active {
+  font-size: 16px !important;
+  /* background-color: #3BB5BD; */
+  border-bottom: solid;
+  border-bottom-width: thick;
+  border-radius: 0px !important;
+  font-weight: bold;
+}
+.topdata {
+  color: white;
+  text-decoration: none;
+  font-size: 16px !important;
+}
+.topdata1 {
+  color: white;
+  text-decoration: none;
+  font-size: 16px !important;
+}
+.topdata:hover {
+  color: white;
+  /* background-image: linear-gradient(#93e1e6, #1fb7c1) !important; */
+  border-radius: 0px !important;
+  font-weight: bold;
+  display: inline-block;
+}
+.icon {
+  height: 20px;
+  padding-left: 4px;
+  padding-right: 0.5rem !important;
+}
+.iconnotes {
+  height: 34px;
+  padding-left: 4px;
+  padding-right: 0.5rem !important;
+}
+
+#secondHead {
+  /* position: sticky; */
+  top: 0;
+  background-color: #7edfeb !important;
+  z-index: 100;
+}
+
+.table td {
+  /* padding: 0.25rem 0.75rem !important; */
+  word-break: break-word;
+  white-space: normal;
+}
+
+.tblRowPadding {
+  padding: 0.15rem 0.75rem !important;
+  font-size: 14px !important;
+  vertical-align: middle;
+}
+.tblRowPaddingWithPadding5 {
+  /* padding: 5px 5px !important; */
+  font-size: 14px !important;
+  vertical-align: middle;
+}
+
+.abcd {
+  padding: 0rem !important;
+  font-size: 14px !important;
+  vertical-align: middle;
+  margin: 0% !important;
+  padding-left: 20px !important;
+  margin-left: 2rem !important;
+  margin-top: 1rem !important;
+}
+.abac {
+  padding: 5px 5px !important;
+  font-size: 14px !important;
+  vertical-align: middle;
+  width: 50px !important;
+  padding: 0% !important;
+  margin: 0% !important;
+  margin-top: 1rem !important;
+}
+.navbar-light {
+  border-top: 2px solid #2dbcc5;
+  background-color: White;
+  font-size: 14px !important;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  font-size: 14px !important;
+  max-width: 100% !important;
+}
+/* .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+} */
+.page-item .page-link .active {
+  z-index: 3;
+  color: black !important;
+  background-color: #8c77b0 !important;
+  border-color: #8c77b0 !important;
+}
+.rTable {
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom-color: white;
+}
+#SrNo {
+  /* background-color:#35bfc9; */
+  background-color: #3c8dbc;
+  height: 35px !important;
+}
+.tbl {
+  background-color: #7edfeb !important;
+}

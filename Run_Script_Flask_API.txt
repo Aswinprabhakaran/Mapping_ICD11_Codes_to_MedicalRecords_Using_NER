@@ -1,0 +1,1 @@
+python backend_flask_app.py -model_path ./modelling_trusted/model-best -ICD_credentials_path ./WHO_ICD_logiin_credentials.json -output ./flask_output -enable_failure_log
