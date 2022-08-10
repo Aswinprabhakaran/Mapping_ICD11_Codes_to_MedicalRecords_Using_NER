@@ -2,10 +2,10 @@
 <html>
   <head>
     <title></title>
-    <link href="static/styles/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="static/styles/style.css" rel="stylesheet" />
-    <link href="static/styles/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
-    <script src="static/scripts/jquery-3.6.0.min.js"></script>
+    <link href="../static/styles/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../static/styles/style.css" rel="stylesheet" />
+    <link href="../static/styles/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <script src="../static/scripts/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
@@ -48,7 +48,7 @@
     <form>
       <div class="container">
         <div class="row mt-5">
-          <div class="col-md-2"><img src="Lambton_Logo.png" alt="Lambton Logo" width="600" height="300"></img> </div>
+          <div class="col-md-2"><img src="../static/Lambton_Logo.png" alt="Lambton Logo" width="600" height="300"></div>
           <div class="col-md-8">
             <table id="detail-table" class="table table-striped">
               <tbody>
@@ -141,7 +141,7 @@
 
       $.ajax({
         type: "POST",
-        url: "http://10.0.0.244:3000/get_icd11_codes_for_sentence",
+        url: "http://localhost:3000/get_icd11_codes_for_sentence",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         data: JSON.stringify(sentence),
