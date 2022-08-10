@@ -11,7 +11,7 @@ import os
 import argparse
 
 from flask_cors import CORS, cross_origin
-from flask import Flask, request, flash, jsonify
+from flask import Flask, request, flash, jsonify, render_template
 import sys
 import pickle
 import time
@@ -178,7 +178,8 @@ def get_WHO_codes(entities):
 
 @app.route("/")
 def hello():
-    return "Welcome to the ICD-11 Code Mapper for Medical Records Using Named Entity Recognition"
+    # return "Welcome to the ICD-11 Code Mapper for Medical Records Using Named Entity Recognition"
+    return render_template('index.html')
 
 @app.route("/get_icd11_codes_for_sentence", methods=['POST'])
 def NER_analysis():
