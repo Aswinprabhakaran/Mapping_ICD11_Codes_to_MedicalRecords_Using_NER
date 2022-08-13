@@ -188,3 +188,44 @@ tr {
 .tbl {
   background-color: #7edfeb !important;
 }
+
+/* Loader */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  /*padding-top:150px;*/
+  padding-top: 409px;
+  z-index: 99999;
+}
+
+.loader div {
+  top: 50%;
+  left: 50%;
+  border: 10px solid #dee2e6; /* Light grey */
+  border-top: 10px solid #593e8e; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loading {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0px;
+  margin-top: 409px;
+}
