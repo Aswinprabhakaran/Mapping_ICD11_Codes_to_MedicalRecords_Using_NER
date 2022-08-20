@@ -189,7 +189,8 @@ def hello():
 @app.route("/get_icd11_codes_for_sentence", methods=['POST'])
 def NER_analysis():
 
-    global SPACY_NER_MODEL
+    # Loading the model from the supplied path
+    SPACY_NER_MODEL = load_SPACY_NER_model(model_path= args['model_path'])
     
     input_data_dict = request.get_json()
     print("\nInput received : ", input_data_dict)
@@ -229,10 +230,7 @@ if __name__ == "__main__":
     # Loading the credentials for accessing the API from WHO-ICD-11
     with open(args['ICD_credentials_path'], 'r') as fin:
         WHO_ICD_logiin_credentials = json.load(fin)
-      
-    # Loading the model from the supplied path
-    SPACY_NER_MODEL = load_SPACY_NER_model(model_path= args['model_path'])
-        
+              
     # Dump the processing logs if logging is enabled
     if args['enable_failure_log']:
 
