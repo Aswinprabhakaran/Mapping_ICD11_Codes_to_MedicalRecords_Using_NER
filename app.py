@@ -38,15 +38,19 @@ def load_SPACY_NER_model(model_path):
     
     """
     
+    ner_model = None
+
     if not os.path.exists(model_path):
         raise ValueError("The given path - {} doesnt exists".format(model_path))
         
     try:
         ner_model = spacy.load(model_path)
     except: 
-        raise ValueError("Unable to Load the model from the path - {}".format(model_path))
+        print("-"*50)
+        print("Unable to load the model")
+        # raise ValueError("Unable to Load the model from the path - {}".format(model_path))
         
-        
+    
     return ner_model
 
 
