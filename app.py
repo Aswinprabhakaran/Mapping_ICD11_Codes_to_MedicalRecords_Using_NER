@@ -184,6 +184,8 @@ def hello():
 
 @app.route("/get_icd11_codes_for_sentence", methods=['POST'])
 def NER_analysis():
+
+    global SPACY_NER_MODEL
     
     input_data_dict = request.get_json()
     print("\nInput received : ", input_data_dict)
