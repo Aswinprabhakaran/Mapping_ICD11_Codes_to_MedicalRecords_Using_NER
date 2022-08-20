@@ -189,6 +189,8 @@ def hello():
 @app.route("/get_icd11_codes_for_sentence", methods=['POST'])
 def NER_analysis():
 
+    global args
+
     # Loading the model from the supplied path
     SPACY_NER_MODEL = load_SPACY_NER_model(model_path= args['model_path'])
     
@@ -214,7 +216,7 @@ def NER_analysis():
     return jsonify(output_data_dict)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" :
 
     ap = argparse.ArgumentParser()
     ap.add_argument("-model_path", "--model_path", required = False, default = "./spacy_model/model-best/", type = str, help = "path to trained SPACY model")
